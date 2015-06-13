@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+<link href="css/bootstrap.min.css" rel="stylesheet">
+ <link href="css/agency.css" rel="stylesheet">
+
+</head>
+
+<body >
+
+<script>
+var tImage = [];
+var tHead = [];
+var tSub = [];
+var tBody = [];
+
+//http://ls448.user.srcf.net/
+//WARNING: STRINGS CONTAINING DOUBLE QUOTES "" MUST BE INSIDE SINGLE QUOTES '' 
+
+tImage[0] = "img/about/CUE-01.jpg";
+tHead[0] = "7 November 2013";
+tSub[0] = "Enass Abo-Hamed, the founder and the inventor, wins £100 for 100 words competition by CUE.";
+tBody[0] = 'The founder has scooped a prize in the 2013 Cambridge University Entrepreneurs (CUE) £100 for 100 words competition. <a href="http://iteamsonline.org/i-teams-success-in-the-cue-100-for-100-words-competition-2/">She was also featured in the i-Teams newsletter.</a>';
+
+tImage[1] = "img/about/ideas-take-flight-01.jpg";
+tHead[1] = "13 February 2014";
+tSub[1] = "The founder team wins Runner-Up at £1k Challenge 2014 by CUE";
+tBody[1] = 'The hydrogen sponge team has won the Runner-Up in 2014 Cambridge University Entrepreneurs (CUE) £1k Challenge. <a href="https://www.facebook.com/Cambridge.University.Entrepreneurs/posts/10151946643950172">The details of the competition by CUE is here.</a>';
+
+tImage[2] = "img/about/innovation-logo-01.jpg";
+tHead[2] = "28 February 2014";
+tSub[2] = "Finalist of Innovation Leaders Conference's Business Plan Competition";
+tBody[2] = "The business idea of hydrogen sponge is selected as a finalist to give the pitch at the Innovation Leaders Conference's business plan competition.";
+
+tImage[3] = "img/about/AccelerateCambridge2-01.jpg";
+tHead[3] = "18 March 2014";
+tSub[3] = "H2GO Power joins Accelerate Cambridge";
+tBody[3] = "Accelerate Cambridge at the Judge Business School, University of Cambridge, welcomes H2GO Power Ltd. to its accelerator programme.";
+
+tImage[4] = "img/about/setforbritain-01.jpg";
+tHead[4] = "March 2014";
+tSub[4] = "Selected for 'SET for BRITAIN'";
+tBody[4] = "H2GO Power's core technology is selected as a finalist for presentation at the House of Commons under the 'SET for BRITAIN' competition.";
+
+tImage[5] = "img/about/climate-kic-01.jpg";
+tHead[5] = "May 2014";
+tSub[5] = "H2GO Power is supported by Climate-KIC";
+tBody[5] = "H2GO Power earn acceptance into the European Institute of Innovation and Technology's (EIT) Climate-KIC start-up accelerator, a network focused on climate change solutions.";
+
+tImage[6] = "img/about/gordonresearchconference-01.jpg";
+tHead[6] = "June 2014";
+tSub[6] = "Poster Prize at the Gordon Research Seminar";
+tBody[6] = "H2GO Power's core technology is awarded the best poster prize at the Gordon Research Seminar (GRS), Noble Metal Nanoparticles, Massachusetts, USA.";
+
+tImage[7] = "img/about/epsrc-01.jpg";
+tHead[7] = "June 2014";
+tSub[7] = "EPSRC follow-on fund";
+tBody[7] = "The inventor of the technology, Enass Abo-Hamed, was awarded the Engineering and Physical Sciences Research Council Impact Accelerator Account Follow on funding (EPSRC IAA Fof).";
+
+tImage[8] = "img/about/chinauklogo-01.jpg";
+tHead[8] = "9 July 2014";
+tSub[8] = "H2GO Power wins the 2nd position at China UK Challenge Final 2014.";
+tBody[8] = "We are delighted to receive the 2nd place at the China UK Challenge Final 2014.";
+
+tImage[9] = "<Br><Br>£15,000";
+tHead[9] = "December 2014";
+tSub[9] = "Accelerate Cambridge funding";
+tBody[9] = "H2GO Power was promoted from pre-Accelerate to Accelerate";
+
+tImage[10] = "<Br> Be Part <br> Of Our <br> Story!";
+tHead[10] = "";
+tSub[10] = "";
+tBody[10] = "";
+
+document.write('<table> <tr><td><br><br></td></tr><tr>');
+
+//Code for backwards historic order
+for(i=(tImage.length-1);i>0;i=i-2){
+	writeRight(i);
+	document.write('</tr><tr>');
+	writeLeft(i-1);
+	document.write('</tr><tr>');
+}
+	if(tImage.length%2==1){
+	document.write('</tr><tr>');
+	writeRight(0);
+	}
+	document.write('</tr></table>');
+	
+function writeLeft(i){	
+	document.write(' '+
+
+	'<td width = "30%" class="tdtext">'+ 
+  	'<p class = "text-center">');
+
+document.write(' '+	
+	'<div class="timeline-heading text-center">' +
+	  '<h4 id="tHead' + i + '" align="right"> </h4>' +
+	  '<h4 id="tSub' +  i + '" class="subheading" align="right"></h4>' +
+	'</div>' +
+	'<div class="timeline-body" align="right">' +
+      '<p id="tBody' + i + '"class="text-muted"></p>' +
+    '</div>' +
+  '</p>'+
+'</td><td width = "12%">');
+
+if(tImage[i].substr(0,3)=="img"){	
+	document.write(' '+
+	    '<img id = tImage' + i + ' class = "img-circle image-size-control" src= "' + 
+	    tImage[i] +'" alt="" align="right">');
+	} else { 
+	document.write(' '+
+		'<div align="right">' +
+		'<h4 class="timeline-img image-size-control" align="right">' + tImage[i] + '</h4>' +
+		'</div>' +
+		'</td><td width = "50%">'+ 
+		'</td>');
+	}
+}
+
+function writeRight(i){	
+	document.write(' '+
+'<td width = "50%">'+ 
+'</td><td width = "12%">'+ 
+  '<p class = "text-center">');
+	
+if(tImage[i].substr(0,3)=="img"){	
+document.write(' '+
+    '<img id = tImage' + i + ' class = "img-circle image-size-control" src= "' + 
+    tImage[i] +'" alt="" align="left">');
+} else { 
+document.write(' '+
+		
+	'<div align="left">' +
+	'<h4 class="timeline-img image-size-control" align="right">' + tImage[i] + '</h4>' +
+	'</div>');
+}
+
+document.write(' '+	
+		'</td><td width = "30%" class="tdtext">'+ 
+	'<div class="timeline-heading text-center">' +
+	  '<h4 id="tHead' + i + '" align="left"> </h4>' +
+	  '<h4 id="tSub' +  i + '" class="subheading" align="left"></h4>' +
+	'</div>' +
+	'<div class="timeline-body" align="left">' +
+      '<p id="tBody' + i + '"class="text-muted"></p>' +
+    '</div>' +
+  '</p>'+
+'</td>');
+}
+
+for (i=0;i<tImage.length;i++){
+	if(tImage[i].substr(0,2)=="img"){
+	document.getElementById("tImage"+i).src = tImage[i];
+	}
+	document.getElementById("tHead"+i).innerHTML = tHead[i];
+	document.getElementById("tSub"+i).innerHTML = tSub[i];
+	document.getElementById("tBody"+i).innerHTML = tBody[i];
+}
+
+</script>
+
+</body>
+
+</html>

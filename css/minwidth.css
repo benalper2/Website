@@ -1,0 +1,14 @@
+.container
+{
+   min-width:1000px !important; /*  suppose you want minimun width of 1000px */
+     /*width: auto !important; Firefox will set width as auto */
+    /* width:1000px;           As IE ignores !important it will set width as 1000px; */
+}
+
+body, .index
+{
+   min-width:1000px !important; /*  suppose you want minimun width of 1000px */
+   overflow: scroll !important;
+  /* width: auto !important;   Firefox will set width as auto */
+    /*width:1000px;            As IE ignores !important it will set width as 1000px; */
+}
